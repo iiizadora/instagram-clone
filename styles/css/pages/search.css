@@ -48,23 +48,28 @@ html {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  width: 327px;
-  height: 36px;
-  border-radius: 10px;
-  background: rgba(118, 118, 128, 0.12);
+  flex-wrap: wrap;
 }
-.search .search__container .search-input p {
-  font-weight: 400;
+.search .search__container .search-input input {
+  border: none;
+  height: 36px;
+  width: 293px;
+  background: rgba(118, 118, 128, 0.12);
+  border-radius: 10px;
+}
+.search .search__container .search-input input[type=text] {
+  padding-left: 34px;
   font-size: 1.6rem;
+  font-weight: 400;
   line-height: 2.2rem;
   letter-spacing: -0.3px;
   color: rgba(60, 60, 67, 0.6);
 }
 .search .search__container .search-input img {
+  position: absolute;
   width: 13.68px;
   height: 13.68px;
-  margin: 11px;
-  color: rgba(60, 60, 67, 0.6);
+  margin-left: 11px;
 }
 .search .search__container .search-shape {
   width: 20px;

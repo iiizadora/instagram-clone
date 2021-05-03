@@ -7,25 +7,34 @@
   .search__container {
     @include simple-flex(space-between, center, row);
     padding: 20px 8px 10px;
+    
 
     .search-input {
       @include simple-flex(flex-start, center, row);
-      width: 327px;
-      height: 36px;
-      border-radius: 10px;
-      background: $search-background;
-      p {
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.2rem;
-        letter-spacing: -0.3px;
-        color: $search-text;
+      flex-wrap: wrap;
+
+      input {
+        
+        border: none;
+        height: 36px;
+        width: 293px;
+        background: $search-background;
+        border-radius: 10px;
+        
+        &[type="text"] {
+          padding-left: 34px;
+          font-size: 1.6rem;
+          font-weight: 400;
+          line-height: 2.2rem;
+          letter-spacing: -0.3px;
+          color: $search-text;
+        }
       }
       img {
+        position: absolute;
         width: 13.68px;
         height: 13.68px;
-        margin: 11px;
-        color: $search-text;
+        margin-left: 11px;
       }
     }
 
@@ -74,9 +83,7 @@
     gap: 1px;
     img {
       width: 124px;
-      height: 119,53px;
+      height: 119, 53px;
     }
   }
-  
-
 }
