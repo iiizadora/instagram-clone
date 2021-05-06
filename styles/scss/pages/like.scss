@@ -1,0 +1,35 @@
+@import "../styles.scss";
+
+header {
+  min-width: 360px;
+  height: 44px;
+  display: flex;
+  padding-top: 10px;
+  
+  background: $background-primary;
+  .following-text {
+    @include font-text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 44px;
+    color: $text-color;
+    &:nth-child(1) {
+      color: $separator-text;
+    }
+  }
+}
+
+.following-content {
+  min-width: 375px;
+  padding: 14px 0;
+  border-bottom: 0.3px solid $separator-line;
+  .following-requests {
+    p {
+      @include font-text(400, 1.5rem, 2rem, -0.25px);
+      color: $text-color;
+      margin-left: 16px;
+    }
+  }
+}
