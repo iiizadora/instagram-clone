@@ -9,9 +9,17 @@
     width: 350px;
     margin: auto;
   }
+  @media (min-width: $breakpoint-laptop) {
+    flex-direction: row;
+    gap: 30px;
+  }
 
   .image-insta {
     display: none;
+    @media (min-width: $breakpoint-laptop) {
+      display: block;
+      height: 96.5%;
+    }
   }
   .form-container {
     @include simple-flex(center, center, column);
@@ -21,6 +29,7 @@
       border: 1px solid $separator-line;
       background: $highlight-contrast-color;
     }
+
     .logo-img {
       width: 182px;
       height: auto;
@@ -139,7 +148,7 @@
       }
       .forgot-password {
         display: inline-block;
-        padding: 12px 0;
+        padding: 20px 0;
         margin: auto;
         color: $text-color;
         letter-spacing: -0.15px;
@@ -177,11 +186,16 @@
       font-size: 1.4rem;
       letter-spacing: -0.15px;
       color: $text-color;
-
+      @media (min-width: $breakpoint-laptop) {
+        margin-top: 30px;
+      }
       .account__image {
         margin: 20px 0;
         img {
           height: 40px;
+        }
+        @media (min-width: $breakpoint-laptop) {
+          margin-top: 50px;
         }
       }
     }
@@ -190,6 +204,7 @@
 footer {
   @include simple-flex(center, center, row);
   width: 100%;
+  position: fixed;
 
   .footer__container {
     margin-bottom: 50px;

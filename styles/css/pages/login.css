@@ -51,8 +51,20 @@ html {
     margin: auto;
   }
 }
+@media (min-width: 876px) {
+  .login-container {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
 .login-container .image-insta {
   display: none;
+}
+@media (min-width: 876px) {
+  .login-container .image-insta {
+    display: block;
+    height: 96.5%;
+  }
 }
 .login-container .form-container {
   display: flex;
@@ -197,7 +209,7 @@ html {
 }
 .login-container .form-container .social-midia .forgot-password {
   display: inline-block;
-  padding: 12px 0;
+  padding: 20px 0;
   margin: auto;
   color: #262626;
   letter-spacing: -0.15px;
@@ -240,11 +252,21 @@ html {
   letter-spacing: -0.15px;
   color: #262626;
 }
+@media (min-width: 876px) {
+  .login-container .account-container .account__app {
+    margin-top: 30px;
+  }
+}
 .login-container .account-container .account__app .account__image {
   margin: 20px 0;
 }
 .login-container .account-container .account__app .account__image img {
   height: 40px;
+}
+@media (min-width: 876px) {
+  .login-container .account-container .account__app .account__image {
+    margin-top: 50px;
+  }
 }
 
 footer {
@@ -253,6 +275,7 @@ footer {
   align-items: center;
   flex-direction: row;
   width: 100%;
+  position: fixed;
 }
 footer .footer__container {
   margin-bottom: 50px;
