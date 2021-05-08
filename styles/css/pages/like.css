@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -17,6 +18,11 @@ html {
   font-size: 10px;
 }
 
+@media (min-width: 768px) {
+  body {
+    background: #fafafa;
+  }
+}
 .tab-bar {
   display: flex;
   justify-content: space-between;
@@ -57,7 +63,6 @@ header .following-text:nth-child(1) {
 .following-content {
   min-width: 375px;
   padding: 14px 0;
-  border-bottom: 0.3px solid rgba(0, 0, 0, 0.2);
 }
 .following-content .following-requests p {
   font-weight: 400;
@@ -66,6 +71,26 @@ header .following-text:nth-child(1) {
   letter-spacing: -0.25px;
   color: #262626;
   margin-left: 16px;
+}
+
+.following-new {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  min-width: 375px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 13px 0;
+}
+.following-new span {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.3px;
+  margin-left: 16px;
+}
+.following-new .following-new__container {
+  display: flex;
 }
 
 /*# sourceMappingURL=like.css.map */

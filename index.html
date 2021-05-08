@@ -11,29 +11,53 @@
 
 <body>
   <main class="login-container">
+    <img class="image-insta" src="./assets/img/instagram-cell.svg" alt="Cell phone">
+
     <div class="form-container">
       <img class="logo-img" src="./assets/img/Instagram-logo.png" alt="Logo Instagram" />
-      <input class="input-form" type="text" name="username" placeholder="Username" value="iza.dev" />
-      <input class="input-form" type="password" name="password" placeholder="Password" />
-      <a href="#" class="forgot-password">Forgot password?</a>
+      <input class="input-form" type="text" name="username" placeholder="Telefone, nome de usuário ou email" />
+      <input class="input-form" type="password" name="password" placeholder="Senha" />
+
       <a class="link-submit" href="./home/">
-        <button class="btn-submit">Log in</button>
+        <button class="btn-submit">Entrar</button>
       </a>
+
       <div class="social-midia">
-        <img class="social-midia__img" src="./assets/icon/facebook-icon.svg" alt="Facebook icon">
-        <p class="social-mida__text">Log in with Facebook</p>
+        <div class="social-midia__line">
+          <div class="line"></div>
+          <div class="social-midia__line-text">OU</div>
+          <div class="line"></div>
+        </div>
+        <div class="social-midia__icon">
+          <img class="social-midia__img" src="./assets/icon/facebook-icon.svg" alt="Facebook icon">
+
+          <p class="social-mida__text">Entrar com o Facebook</p>
+
+        </div>
+
+        <a href="#" class="forgot-password">Esqueceu a senha?</a>
       </div>
     </div>
+    
+      <section class="account-container">
 
-    <div class="account-container">
-      <span class="account__line"> OR</span>
-      <span class="account__text">Don’t have an account? <b>Sign up.</b>
-      </span>
-    </div>
-    <section class="tab-login">
-      <span>Instagram from Facebook</span>
-    </section>
+        <div class="account__text">Não tem uma conta? <b>Cadastre-se.</b>
+        </div>
+
+        <div class="account__app">
+          <p>Obtenha o aplicativo.</p>
+          <div class="account__image">
+            <img src="./assets/img/apple-app.svg" alt="apple-app">
+            <img src="./assets/img/google-app.svg" alt="google-app">
+          </div>
   </main>
+
+  <footer>
+    <div class="footer__container">
+    <span class="footer__text">Português (Brasil)</span>
+    <span>© 2021 Instagram do Facebook</span>
+  </div>
+  </footer>
 
 </body>
 

@@ -5,7 +5,7 @@ header {
   height: 44px;
   display: flex;
   padding-top: 10px;
-  
+
   background: $background-primary;
   .following-text {
     @include font-text;
@@ -24,12 +24,27 @@ header {
 .following-content {
   min-width: 375px;
   padding: 14px 0;
-  border-bottom: 0.3px solid $separator-line;
+
   .following-requests {
     p {
       @include font-text(400, 1.5rem, 2rem, -0.25px);
       color: $text-color;
       margin-left: 16px;
     }
+  }
+}
+
+.following-new {
+  @include simple-flex(flex-start, flex-start, column);
+  min-width: 375px;
+  border-top: 1px solid $separator-line;
+  padding: 13px 0;
+  span {
+    @include font-text(600, 1.5rem, 2rem, -0.3px);
+    margin-left: 16px;
+  }
+  .following-new__container {
+    display: flex;
+    
   }
 }
