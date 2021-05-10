@@ -79,6 +79,7 @@
 
     .link-submit {
       width: 100%;
+      
       @media (min-width: $breakpoint-tablet) {
         margin: auto;
       }
@@ -92,6 +93,8 @@
         font-size: 1.3rem;
         color: $highlight-contrast-color;
         margin-top: 30px;
+        cursor: pointer;
+        
         @media (min-width: $breakpoint-tablet) {
           width: 268px;
           height: 30px;
@@ -132,6 +135,7 @@
         @include simple-flex(flex-start, center, row);
         color: $highlight-color-facebook;
         padding: 10px 0;
+        cursor: pointer;
         .social-midia__img {
           margin-right: 10px;
           width: 1.7rem;
@@ -169,6 +173,7 @@
       b {
         color: $highlight-color;
         font-weight: 600;
+        cursor: pointer;
       }
       @media (min-width: $breakpoint-tablet) {
         width: 350px;
@@ -191,6 +196,7 @@
       }
       .account__image {
         margin: 20px 0;
+        cursor: pointer;
         img {
           height: 40px;
         }
@@ -213,6 +219,14 @@ footer {
     color: $search-text;
     .footer__text {
       margin-right: 10px;
+    }
+    .footer__me{
+      a {
+        margin-left: 10px;
+        text-decoration: none;
+        color:$highlight-color-facebook; 
+        font-weight: bold;
+      }
     }
   }
 }

@@ -142,6 +142,7 @@ html {
   font-size: 1.3rem;
   color: #ffff;
   margin-top: 30px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .login-container .form-container .link-submit .btn-submit {
@@ -193,6 +194,7 @@ html {
   flex-direction: row;
   color: #385185;
   padding: 10px 0;
+  cursor: pointer;
 }
 .login-container .form-container .social-midia .social-midia__icon .social-midia__img {
   margin-right: 10px;
@@ -231,6 +233,7 @@ html {
 .login-container .account-container .account__text b {
   color: #3797ef;
   font-weight: 600;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .login-container .account-container .account__text {
@@ -259,6 +262,7 @@ html {
 }
 .login-container .account-container .account__app .account__image {
   margin: 20px 0;
+  cursor: pointer;
 }
 .login-container .account-container .account__app .account__image img {
   height: 40px;
@@ -285,6 +289,12 @@ footer .footer__container {
 }
 footer .footer__container .footer__text {
   margin-right: 10px;
+}
+footer .footer__container .footer__me a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #385185;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=login.css.map */
