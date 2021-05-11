@@ -17,5 +17,12 @@
     font-size: $size;
     line-height: $line;
     letter-spacing: $spacing;
-    
 }
+
+@mixin action() {
+  color: #0095f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+  
