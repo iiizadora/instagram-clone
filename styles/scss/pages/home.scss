@@ -1,25 +1,102 @@
 @import "../styles.scss";
 
 header {
-  @include simple-flex(space-between, center, row);
   width: 100%;
   min-height: 44px;
   background-color: $background-secondary;
-  padding: 10px 10px;
-  box-sizing: border-box;
+  padding: 10px 20px;
 
-  .logo-img {
-    width: 105px;
-    height: auto;
+  @media (min-width: $breakpoint-tablet) {
+    background-color: $highlight-contrast-color;
+    border-bottom: 1px solid $border-card;
   }
 
-  .action-icon {
-    width: 24px;
-    height: auto;
-    cursor: pointer;
+  .header-tablet {
+    display: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      @include simple-flex(space-between, center, row);
+
+      .header-tablet__logo {
+        img {
+          max-width: 103px;
+          max-height: 100%;
+        }
+      }
+
+      .header-tablet__search {
+        padding: 7px;
+        background-color: $background-primary;
+        height: 28px;
+        min-width: 215px;
+        width: 215px;
+        border: 1px solid $border-card;
+        border-radius: 3px;
+        .header-tablet__input {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .header-text {
+            font-size: 1.4rem;
+            color: $text-secondary;
+          }
+          .header-img img {
+            color: $text-secondary;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 6px;
+          }
+        }
+      }
+
+      .header-tablet__icons {
+        @include simple-flex(space-between, flex-end, row);
+        width: 198px;
+        padding-left: 24px;
+
+        .header-profile {
+          @include box-round(22px);
+        }
+        .header-menssenger,
+        .header-explorer,
+        .header-like {
+          width: 22px;
+          height: 24px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .header-cell {
+    @include simple-flex(space-between, center, row);
+
+    .logo-img {
+      width: 105px;
+      height: auto;
+    }
+
+    .action-icon {
+      width: 24px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
   }
 }
+
 main {
+  @media (min-width: $breakpoint-laptop) {
+    padding: 30px;
+    display: flex;
+    max-width: 935px;
+    margin: auto;
+    
+  }
+
   @media (min-width: $breakpoint-tablet) {
     padding: 30px;
     display: flex;
@@ -85,7 +162,7 @@ main {
       flex-direction: column;
       @media (min-width: $breakpoint-tablet) {
         border: 1px solid $border-card;
-        background:$highlight-contrast-color ;
+        background: $highlight-contrast-color;
       }
 
       .card-header {
@@ -178,114 +255,112 @@ main {
 
       .card-footer {
         display: none;
-        @media (min-width: $breakpoint-tablet){
+        @media (min-width: $breakpoint-tablet) {
           @include simple-flex(flex-start, center, row);
-          
-        padding: 5px 12px;
-        border-top: 1px solid $border-card-secondary;
-        img {
-          width: 24px;
-          height: 24px;
-          margin: 8px 16px 8px 0;
+
+          padding: 5px 12px;
+          border-top: 1px solid $border-card-secondary;
+          img {
+            width: 24px;
+            height: 24px;
+            margin: 8px 16px 8px 0;
+          }
+          .card-footer_text {
+            margin-left: auto;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: rgba(0, 149, 246);
+            opacity: 0.3;
+            line-height: 1.8rem;
+          }
+          textarea {
+            height: 18px;
+            font-size: 1.4rem;
+            color: $text-secondary;
+            border: none;
+            outline: none;
+            resize: none;
+            min-width: 170px;
+          }
         }
-        .card-footer_text {
-          
-          margin-left: auto;
-          font-size: 1.4rem;
-          font-weight: 600;
-          color:rgba(0,149,246);
-          opacity: 0.3;
-          line-height: 1.8rem;
-        }
-        textarea {
-          height: 18px;
-          font-size: 1.4rem;
-          color: $text-secondary;
-          border: none;
-          outline: none;
-          resize: none;
-          min-width: 170px;
-          
-        }
-        }
-        
       }
     }
   }
 
   .aside-container {
     display: none;
-        @media (min-width: $breakpoint-tablet){
-    @include simple-flex(flex-start, flex-start, column);
-    min-width: 300px;
-
-    .user-infos {
-      @include simple-flex(flex-start, center);
-      width: 100%;
-      margin-bottom: 20px;
-
-      img {
-        @include box-round(56px);
-        margin-right: 15px;
-      }
-
-      .user-name {
-        font-weight: 600;
-        font-size: 1.4rem;
-        margin-bottom: 1.5px;
-      }
-
-      .user-fullname {
-        color: #8e8e8e;
-        font-size: 1.4rem;
-      }
-
-      .logout-action {
-        @include action;
-        margin-left: auto;
-      }
-    }
-
-    .suggestions-container {
+    @media (min-width: $breakpoint-laptop) {
       @include simple-flex(flex-start, flex-start, column);
-      width: 100%;
+      min-width: 300px;
 
-      .suggestion-title {
-        color: #8e8e8e;
-        font-weight: 600;
-        margin-bottom: 10px;
-      }
-
-      .suggestion {
+      .user-infos {
         @include simple-flex(flex-start, center);
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         img {
-          @include box-round(32px);
+          @include box-round(56px);
           margin-right: 15px;
         }
 
-        .follow-action {
-          @include action;
-          margin-left: auto;
+        .user-name {
+          font-weight: 600;
+          font-size: 1.4rem;
+          margin-bottom: 1.5px;
         }
 
-        .suggestion-name {
+        .user-fullname {
+          color: #8e8e8e;
           font-size: 1.4rem;
         }
 
-        .suggestion-common-followers {
+        .logout-action {
+          @include action;
+          margin-left: auto;
+        }
+      }
+
+      .suggestions-container {
+        @include simple-flex(flex-start, flex-start, column);
+        width: 100%;
+
+        .suggestion-title {
           color: #8e8e8e;
-          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+
+        .suggestion {
+          @include simple-flex(flex-start, center);
+          width: 100%;
+          margin-bottom: 10px;
+
+          img {
+            @include box-round(32px);
+            margin-right: 15px;
+          }
+
+          .follow-action {
+            @include action;
+            margin-left: auto;
+          }
+
+          .suggestion-name {
+            font-size: 1.4rem;
+          }
+
+          .suggestion-common-followers {
+            color: #8e8e8e;
+            font-size: 1.2rem;
+          }
         }
       }
     }
-  }
   }
 }
 
 .tab-bar {
-  @media (min-width: $breakpoint-tablet){display: none;}
-  
+  @media (min-width: $breakpoint-tablet) {
+    display: none;
+  }
 }

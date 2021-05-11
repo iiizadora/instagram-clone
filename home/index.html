@@ -11,12 +11,41 @@
 
 <body>
   <header>
-    <img class="action-icon" src="../assets/icon/camera-icon.png" alt="Camera" />
-    <img class="logo-img" src="../assets/img/Instagram-logo.png" alt="Logo Instagram" />
-    <img class="action-icon" src="../assets/icon/messenger-icon.svg" alt="Messenger" />
+    <div class="header-cell">
+      <img class="action-icon" src="../assets/icon/camera-icon.png" alt="Camera" />
+      <img class="logo-img" src="../assets/img/Instagram-logo.png" alt="Logo Instagram" />
+      <img class="action-icon" src="../assets/icon/messenger-icon.svg" alt="Messenger" />
+    </div>
+
+    <div class="header-tablet">
+      <div class="header-tablet__logo">
+        <img src="../assets/img/Instagram-logo.png" alt="logo">
+      </div>
+
+      <div class="header-tablet__search">
+        <div class="header-tablet__input">
+          <span class="header-img"><img src="../assets/icon/search-icon.svg" alt=""></span>
+          <span class="header-text">Pesquisar</span>
+        </div>
+      </div>
+
+      <div class="header-tablet__icons">
+        <img class="header-home"  src="../assets/icon/home-icon.png" alt="home icon">
+
+        <img class="header-menssenger" src="../assets/icon/mensseger-insta.svg" alt="comment icon">
+
+        <img class="header-explorer" src="../assets/icon/explorer-insta.svg" alt="comment icon">
+
+        <img class="header-like" src="../assets/icon/like-icon.svg" alt="like icon">
+
+        <img class="header-profile" src="../assets/img/profile-principal.png" alt="Woman profile">
+
+      </div>
+
+    </div>
   </header>
   <main>
-    
+
     <div class="page-container">
       <section class="stories-container">
         <div class="story-item">
@@ -159,86 +188,88 @@
           </div>
         </div>
       </section>
+
     </div>
-
-    <aside class="aside-container">
-      <div class="user-infos">
-        <img src="../assets/img/profile-principal.png" alt="imagem do usuario logado">
-        <div>
-          <p class="user-name">iza.dev</p>
-          <p class="user-fullname">Izadora Oliveira</p>
-        </div>
-        <a class="logout-action" href="../index.html">Mudar</a>
-      </div>
-
-      <div class="suggestions-container">
-        <p class="suggestion-title">Sugestões para você</p>
-        
-        <div class="suggestion">
-          <img src="../assets/img/followers-1.png" alt="imagem do usuario logado">
+    <div class="aside">
+      <aside class="aside-container">
+        <div class="user-infos">
+          <img src="../assets/img/profile-principal.png" alt="imagem do usuario logado">
           <div>
-            <p class="suggestion-name">papodedev</p>
-            <p class="suggestion-common-followers">Sugestões para você</p>
+            <p class="user-name">iza.dev</p>
+            <p class="user-fullname">Izadora Oliveira</p>
           </div>
-          <span class="follow-action">Seguir</span>
+          <a class="logout-action" href="../index.html">Mudar</a>
         </div>
 
-        <div class="suggestion">
-          <img src="../assets/img/followers-2.png" alt="imagem do usuario logado">
-          <div>
-            <p class="suggestion-name">techly.com.br</p>
-            <p class="suggestion-common-followers">Sugestões para você</p>
-          </div>
-          <span class="follow-action">Seguir</span>
-        </div>
+        <div class="suggestions-container">
+          <p class="suggestion-title">Sugestões para você</p>
 
-        <div class="suggestion">
-          <img src="../assets/img/followers-3.png" alt="imagem do usuario logado">
-          <div>
-            <p class="suggestion-name">codepwr</p>
-            <p class="suggestion-common-followers">Sugestões para você</p>
+          <div class="suggestion">
+            <img src="../assets/img/followers-1.png" alt="imagem do usuario logado">
+            <div>
+              <p class="suggestion-name">papodedev</p>
+              <p class="suggestion-common-followers">Sugestões para você</p>
+            </div>
+            <span class="follow-action">Seguir</span>
           </div>
-          <span class="follow-action">Seguir</span>
-        </div>
 
-        <div class="suggestion">
-          <img src="../assets/img/followers-4.png" alt="imagem do usuario logado">
-          <div>
-            <p class="suggestion-name">tech.anne</p>
-            <p class="suggestion-common-followers">Sugestões para você</p>
+          <div class="suggestion">
+            <img src="../assets/img/followers-2.png" alt="imagem do usuario logado">
+            <div>
+              <p class="suggestion-name">techly.com.br</p>
+              <p class="suggestion-common-followers">Sugestões para você</p>
+            </div>
+            <span class="follow-action">Seguir</span>
           </div>
-          <span class="follow-action">Seguir</span>
-        </div>
 
-        <div class="suggestion">
-          <img src="../assets/img/followers-5.png" alt="imagem do usuario logado">
-          <div>
-            <p class="suggestion-name">ga.brielapinheiro</p>
-            <p class="suggestion-common-followers">Sugestões para você</p>
+          <div class="suggestion">
+            <img src="../assets/img/followers-3.png" alt="imagem do usuario logado">
+            <div>
+              <p class="suggestion-name">codepwr</p>
+              <p class="suggestion-common-followers">Sugestões para você</p>
+            </div>
+            <span class="follow-action">Seguir</span>
           </div>
-          <span class="follow-action">Seguir</span>
+
+          <div class="suggestion">
+            <img src="../assets/img/followers-4.png" alt="imagem do usuario logado">
+            <div>
+              <p class="suggestion-name">tech.anne</p>
+              <p class="suggestion-common-followers">Sugestões para você</p>
+            </div>
+            <span class="follow-action">Seguir</span>
+          </div>
+
+          <div class="suggestion">
+            <img src="../assets/img/followers-5.png" alt="imagem do usuario logado">
+            <div>
+              <p class="suggestion-name">ga.brielapinheiro</p>
+              <p class="suggestion-common-followers">Sugestões para você</p>
+            </div>
+            <span class="follow-action">Seguir</span>
+          </div>
         </div>
-      </div>
-    </aside>
+      </aside>
+    </div>
   </main>
-    <section class="tab-bar">
-      <a href="#">
-        <img src="../assets/icon/home-icon.png" alt="Home" />
-      </a>
-      <a href="../search/index.html">
-        <img src="../assets/icon/search-icon.svg" alt="Search" />
-      </a>
-      <a href="#">
-        <img src="../assets/icon/add-icon.png" alt="Add" />
-      </a>
-      <a href="../likes/index.html">
-        <img src="../assets/icon/like-icon.svg" alt="Like" />
-      </a>
-      <a href="#">
-        <img src="../assets/icon/user-icon.png" alt="" />
-      </a>
-    </section>
-  
+  <section class="tab-bar">
+    <a href="#">
+      <img src="../assets/icon/home-icon.png" alt="Home" />
+    </a>
+    <a href="../search/index.html">
+      <img src="../assets/icon/search-icon.svg" alt="Search" />
+    </a>
+    <a href="#">
+      <img src="../assets/icon/add-icon.png" alt="Add" />
+    </a>
+    <a href="../likes/index.html">
+      <img src="../assets/icon/like-icon.svg" alt="Like" />
+    </a>
+    <a href="#">
+      <img src="../assets/icon/user-icon.png" alt="" />
+    </a>
+  </section>
+
 </body>
 
 </html>
