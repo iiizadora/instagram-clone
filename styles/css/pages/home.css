@@ -130,7 +130,7 @@ header .header-cell .action-icon {
   }
 }
 
-@media (min-width: 876px) {
+@media (min-width: 920px) {
   main .main-container {
     padding: 30px;
     display: flex;
@@ -329,7 +329,7 @@ main .feed-container .card-post .card-footer {
 main .aside-container {
   display: none;
 }
-@media (min-width: 876px) {
+@media (min-width: 920px) {
   main .aside-container {
     display: flex;
     justify-content: flex-start;

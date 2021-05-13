@@ -1,230 +1,244 @@
 @import "../styles.scss";
 
 .login-container {
-  @include simple-flex(center, center, column);
-  height: 95%;
-  margin: 0 16px;
-
-  @media (min-width: $breakpoint-tablet) {
-    width: 350px;
-    margin: auto;
-  }
   @media (min-width: $breakpoint-laptop) {
-    flex-direction: row;
+    @include simple-flex(center, center, row);
+    max-width: 935px;
+    margin: 0 auto;
     gap: 30px;
   }
 
-  .image-insta {
-    display: none;
-    @media (min-width: $breakpoint-laptop) {
-      display: block;
-      height: 96.5%;
+  .responsive-laptop__image {
+    .image-insta {
+      display: none;
+      @media (min-width: $breakpoint-laptop) {
+        display: block;
+        height: 100%;
+      }
     }
   }
-  .form-container {
+
+  .responsive-laptop {
     @include simple-flex(center, center, column);
-    width: 100%;
+    width: auto;
+    height: 100%;
+    margin: 50px 16px 0 16px;
 
     @media (min-width: $breakpoint-tablet) {
-      border: 1px solid $separator-line;
-      background: $highlight-contrast-color;
+      width: 350px;
+      height: 100%;
+      margin: 50px auto;
     }
 
-    .logo-img {
-      width: 182px;
-      height: auto;
-      margin-bottom: 39px;
-
-      @media (min-width: $breakpoint-tablet) {
-        width: 175px;
-        margin: 22px auto;
-        padding-top: 10px;
-      }
-    }
-
-    .input-form {
-      font-size: 1.1rem;
+    .form-container {
+      @include simple-flex(center, center, column);
       width: 100%;
-      height: 44px;
-      margin: 6px 0;
-      padding: 0 15px;
-      box-sizing: border-box;
-      border: 0.5px solid rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      background-color: $background-primary;
-      color: $text-color;
+      height: 100%;
+      padding: 10px 0;
 
       @media (min-width: $breakpoint-tablet) {
-        width: 266px;
-        height: 36px;
-        margin-bottom: 4px;
-      }
-      &:focus {
-        outline: none;
-      }
-
-      &::placeholder {
-        color: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    .forgot-password {
-      color: $highlight-color;
-      font-size: 1.2rem;
-      margin-top: 13px;
-      font-weight: 500;
-      text-decoration: none;
-      align-self: flex-end;
-    }
-
-    .link-submit {
-      width: 100%;
-      
-      @media (min-width: $breakpoint-tablet) {
-        margin: auto;
-      }
-      .btn-submit {
-        width: 100%;
-        height: 44px;
-        background-color: $highlight-color;
-        border: none;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 1.3rem;
-        color: $highlight-contrast-color;
-        margin-top: 30px;
-        cursor: pointer;
-        
-        @media (min-width: $breakpoint-tablet) {
-          width: 268px;
-          height: 30px;
-          margin: 10px 40px;
-        }
-      }
-    }
-    .social-midia {
-      @include simple-flex(flex-start, center, column);
-      width: 100%;
-
-      .social-midia__line {
-        @include simple-flex(flex-start, center, row);
-        width: 100%;
-        margin: 20px 0;
-        .line {
-          height: 1px;
-          background-color: $separator-line;
-          align-items: center;
-          top: 1.45px;
-          flex: 1;
-        }
-
-        @media (min-width: $breakpoint-tablet) {
-          width: 268px;
-        }
-        .social-midia__line-text {
-          margin: 0 18px;
-          text-align: center;
-          font-size: 1.3rem;
-          line-height: 1.5rem;
-          font-weight: 600;
-          color: $separator-text;
-          text-transform: uppercase;
-        }
-      }
-      .social-midia__icon {
-        @include simple-flex(flex-start, center, row);
-        color: $highlight-color-facebook;
-        padding: 10px 0;
-        cursor: pointer;
-        .social-midia__img {
-          margin-right: 10px;
-          width: 1.7rem;
-          height: 1.7rem;
-        }
-        .social-mida__text {
-          font-size: 1.2rem;
-          font-weight: 600;
-          line-height: 1.67rem;
-          letter-spacing: -0.15px;
-          align-self: center;
-          color: $highlight-color-facebook;
-        }
-      }
-      .forgot-password {
-        display: inline-block;
-        padding: 20px 0;
-        margin: auto;
-        color: $text-color;
-        letter-spacing: -0.15px;
-      }
-    }
-  }
-
-  .account-container {
-    @include simple-flex(flex-start, center, column);
-    width: 100%;
-    margin: 15px 0;
-
-    .account__text {
-      font-weight: 400;
-      font-size: 1.4rem;
-      letter-spacing: -0.15px;
-      color: $text-color;
-      b {
-        color: $highlight-color;
-        font-weight: 600;
-        cursor: pointer;
-      }
-      @media (min-width: $breakpoint-tablet) {
-        width: 350px;
-        padding: 25px 0;
+        margin-top: 40px;
         border: 1px solid $separator-line;
-        text-align: center;
         background: $highlight-contrast-color;
       }
+
+      .form-container__login {
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+          max-width: 268px;
+          margin: 0 auto;
+          padding-top: 10px;
+        }
+
+        .logo-img {
+          display: block;
+          width: 175px;
+          height: auto;
+          margin: 22px auto;
+        }
+
+        .input-form {
+          font-size: 1.1rem;
+          width: 100%;
+          height: 44px;
+          margin: 6px 0;
+          padding: 0 15px;
+          box-sizing: border-box;
+          border: 0.5px solid rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+          background-color: $background-primary;
+          color: $text-color;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        .link-submit {
+          width: 100%;
+
+          .btn-submit {
+            width: 100%;
+            height: 44px;
+            background-color: $highlight-color;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: $highlight-contrast-color;
+            margin-top: 30px;
+            cursor: pointer;
+            @media (min-width: $breakpoint-tablet) {
+              max-width: 268px;
+              height: 30px;
+              margin: 10px auto;
+            }
+          }
+        }
+      }
+
+      .forgot-password {
+        color: $highlight-color;
+        font-size: 1.2rem;
+        margin-top: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        align-self: flex-end;
+      }
+
+      .social-midia {
+        @include simple-flex(flex-start, center, column);
+        width: 100%;
+        @media (min-width: $breakpoint-tablet) {
+          max-width: 268px;
+        }
+        .social-midia__line {
+          @include simple-flex(flex-start, center, row);
+          width: 100%;
+          margin: 20px 0;
+          @media (min-width: $breakpoint-tablet) {
+            margin: 10px 0;
+          }
+
+          .line {
+            height: 1px;
+            background-color: $separator-line;
+            align-items: center;
+            top: 1.45px;
+            flex: 1;
+          }
+
+          .social-midia__line-text {
+            margin: 0 18px;
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            font-weight: 600;
+            color: $separator-text;
+            text-transform: uppercase;
+          }
+        }
+        .social-midia__icon {
+          @include simple-flex(flex-start, center, row);
+          color: $highlight-color-facebook;
+          padding: 10px 0;
+          cursor: pointer;
+          .social-midia__img {
+            margin-right: 10px;
+            width: 1.7rem;
+            height: 1.7rem;
+          }
+          .social-mida__text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.67rem;
+            letter-spacing: -0.15px;
+            align-self: center;
+            color: $highlight-color-facebook;
+          }
+        }
+        .forgot-password {
+          display: inline-block;
+          padding: 20px 0;
+          margin: auto;
+          color: $text-color;
+          letter-spacing: -0.15px;
+        }
+      }
     }
 
-    .account__app {
+    .account-container {
       @include simple-flex(flex-start, center, column);
-      margin: 20px 0;
-      font-weight: 400;
-      font-size: 1.4rem;
-      letter-spacing: -0.15px;
-      color: $text-color;
-      @media (min-width: $breakpoint-laptop) {
-        margin-top: 30px;
-      }
-      .account__image {
-        margin: 20px 0;
-        cursor: pointer;
-        img {
-          height: 40px;
+      width: 100%;
+      margin: 15px 0;
+
+      .account__text {
+        font-weight: 400;
+        font-size: 1.4rem;
+        letter-spacing: -0.15px;
+        color: $text-color;
+        b {
+          color: $highlight-color;
+          font-weight: 600;
+          cursor: pointer;
         }
-        @media (min-width: $breakpoint-laptop) {
-          margin-top: 50px;
+
+        @media (min-width: $breakpoint-tablet) {
+          width: 350px;
+          padding: 25px 0;
+          border: 1px solid $separator-line;
+          text-align: center;
+          background: $highlight-contrast-color;
+        }
+      }
+
+      .account__app {
+        @include simple-flex(flex-start, center, column);
+        margin: 20px 0;
+        font-weight: 400;
+        font-size: 1.4rem;
+        letter-spacing: -0.15px;
+        color: $text-color;
+
+        .account__image {
+          margin: 20px 0;
+          cursor: pointer;
+          img {
+            height: 40px;
+          }
         }
       }
     }
   }
 }
+
 footer {
   @include simple-flex(center, center, row);
-  width: 100%;
-  position: fixed;
+  flex-wrap: wrap;
+  margin: 20px 16px;
 
   .footer__container {
-    margin-bottom: 50px;
+    margin: 15px 0;
     font-size: 1.2rem;
     font-weight: 400;
     color: $search-text;
     .footer__text {
       margin-right: 10px;
     }
-    .footer__me{
+    .footer__me {
       a {
-        margin-left: 10px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
         text-decoration: none;
-        color:$highlight-color-facebook; 
+        color: $highlight-color-facebook;
         font-weight: bold;
       }
     }
