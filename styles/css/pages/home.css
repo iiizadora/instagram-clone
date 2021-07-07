@@ -41,7 +41,7 @@ header {
   width: 100%;
   min-height: 44px;
   background-color: #f2f2f2;
-  padding: 10px 20px;
+  padding: 12px 50px;
 }
 @media (min-width: 768px) {
   header {
@@ -58,6 +58,9 @@ header .header-tablet {
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    width: 100%;
+    max-width: 840px;
+    margin: auto;
   }
   header .header-tablet .header-tablet__logo img {
     max-width: 103px;
